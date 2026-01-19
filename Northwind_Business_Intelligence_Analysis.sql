@@ -105,7 +105,7 @@ select * from Ranked_Products
 where product_rank <= 3
 order by categoryName, product_rank;
 
--- Create a running total of revenue ordered by date. (CASH FLOW - Finance Metric/Health (Cumulative Rev))
+-- Create a running total of revenue ordered by date. (CASH FLOW - Finance Metric/Health (Cumulative Revenue))
 with daily_sales as (select 
 o.orderDate, 
 sum(od.unitPrice*od.quantity*(1-od.discount)) as daily_revenue
